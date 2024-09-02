@@ -13,3 +13,17 @@ counterButtons.forEach((btn) => {
     counterFunc(currentButton);
   });
 });
+
+//!-- Counter Function --//
+const counterFunc = (currentButton) => {
+  if (currentButton === "decrease") {
+    count--;
+  } else if (currentButton === "increase") {
+    count++;
+  } else {
+    count = 0;
+  }
+
+  //?-- Update Count Text --//
+  counterText.textContent = count;
+};
