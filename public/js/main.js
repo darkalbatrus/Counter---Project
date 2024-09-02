@@ -14,6 +14,17 @@ counterButtons.forEach((btn) => {
   });
 });
 
+//!-- Color Function --//
+const colorFunc = () => {
+  if (count < 0) {
+    counterText.style.color = "rgb(245,0,0)";
+  } else if (count > 0) {
+    counterText.style.color = "rgb(0,170,0)";
+  } else {
+    counterText.style.color = "#333";
+  }
+};
+
 //!-- Counter Function --//
 const counterFunc = (currentButton) => {
   if (currentButton === "decrease") {
@@ -26,4 +37,7 @@ const counterFunc = (currentButton) => {
 
   //?-- Update Count Text --//
   counterText.textContent = count;
+
+  //?-- Update Count Color --//
+  colorFunc();
 };
